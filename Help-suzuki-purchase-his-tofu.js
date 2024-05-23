@@ -48,3 +48,5 @@ const buyTofu = (cost, box) => {
     : [ mon_cnt, monme_cnt, mon_cnt + monme_cnt * 60, mon_req + monme_req ];
   
 }
+
+// or
