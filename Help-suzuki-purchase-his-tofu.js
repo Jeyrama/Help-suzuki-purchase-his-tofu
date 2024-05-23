@@ -50,3 +50,17 @@ const buyTofu = (cost, box) => {
 }
 
 // or
+
+function buyTofu(cost,box){
+  const mon = box.split(' ').filter(x => x === 'mon').length;
+  const monme = box.split(' ').filter(x => x === 'monme').length;
+  const acount = mon + monme * 60;
+  const monmeNeeded = Math.min(Math.floor(cost / 60), monme);
+  const monNeeded = cost - monmeNeeded * 60;
+
+  if (monmeNeeded > monme || monNeeded > mon) {
+    return 'leaving the market';
+  }
+
+  return [mon, monme, acount, monNeeded + monmeNeeded];
+}
