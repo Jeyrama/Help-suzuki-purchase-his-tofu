@@ -35,3 +35,16 @@ If the cost of tofu is higher than your total amount of money also return “lea
 
 
 // Solution
+
+const buyTofu = (cost, box) => {
+
+  let monme_cnt = (box.match(/\bmonme\b/g) || []).length,
+        mon_cnt = (box.match(/\bmon\b/g) || []).length,
+      monme_req = Math.min(monme_cnt, cost / 60 | 0),
+        mon_req = cost - monme_req * 60;
+        
+  return mon_req > mon_cnt
+    ? 'leaving the market'
+    : [ mon_cnt, monme_cnt, mon_cnt + monme_cnt * 60, mon_req + monme_req ];
+  
+}
