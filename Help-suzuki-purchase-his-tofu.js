@@ -32,3 +32,6 @@ Determine the minimum number of coins to pay for tofu.
 You must pay with exact change and if you do not have the correct change return “leaving the market”.
 If the cost of tofu is higher than your total amount of money also return “leaving the market”
 */
+
+
+// Solution
